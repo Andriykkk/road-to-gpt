@@ -27,3 +27,12 @@ This repository contains Jupyter Notebooks implementing different language model
 - **Performance**: 
     - The model performed poorly with a consistent loss of 7 during training.
     - I think the model is just too deep, and without normalization layers or residual blocks, the model struggles to learn effectively.
+ 
+### 4. **RNN Model**
+- **Context Size**: 10
+- **Vocabulary Size**: 91 (characted level tokenisation)
+- **Description**: Created simple RNN and tried to teach it on Shecspir dataset, as you may thing nothing usefull it don`t generate, but it was quite good result compared to others
+- **Performance**: 
+    - The model performed poorly with a loss of 4.7 on training and validation datasets.
+    - Whole problem is in RNN layer, even if it improve overall perfomance and lower loss, I couldn`t increase context size due to exploding gradient, so next i will make LSTM, maybe it will resolve this problem.
+ 
