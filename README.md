@@ -36,3 +36,11 @@ This repository contains Jupyter Notebooks implementing different language model
     - The model performed poorly with a loss of 4.7 on training and validation datasets.
     - Whole problem is in RNN layer, even if it improve overall perfomance and lower loss, I couldn`t increase context size due to exploding gradient, so next i will make LSTM, maybe it will resolve this problem.
  
+### 5. **LSTM Model**
+- **Context Size**: 100-400
+- **Vocabulary Size**: 91 (characted level tokenisation)
+- **Description**: Created LSTM and teach it on Shecspir dataset, again it don`t generate anything useful, still loss too big and probably problems with tokenisation as character level is give too much tokens in which lstm cant find anything useful, but it was quite big improvement compared to usual rnn, but it not just lstm as i added other layers after lstm to increase perfomance
+- **Performance**: 
+    - The model performed poorly with a minimum loss of 3.2 which is quite big improvement compared to previous model, but still generate gibberish.
+    - Problem right now I think is that lstm is not for text, it is definitely better that others that I tried, but transformer is just better and at such size it`s not so expensive, but i want to find something that not transformer as i have no clue of how to expand transformers so they could give good results outside of Shecspir dataset.
+ 
