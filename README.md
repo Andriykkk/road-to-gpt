@@ -44,3 +44,37 @@ This repository contains Jupyter Notebooks implementing different language model
     - The model performed poorly with a minimum loss of 3.2 which is quite big improvement compared to previous model, but still generate gibberish.
     - Problem right now I think is that lstm is not for text, it is definitely better that others that I tried, but transformer is just better and at such size it`s not so expensive, but i want to find something that not transformer as i have no clue of how to expand transformers so they could give good results outside of Shecspir dataset.
  
+### 5. **Transformer Model**
+- **Context Size**: 32
+- **Vocabulary Size**: 91 (characted level tokenisation)
+- **Description**: Created Transformer and teach it on Shecspir dataset, very big improvement from lstm and one of the reason is that i made mistake in lstm due to which it couldn`t learn, but still i think that trasnformer work just better and also i get quite good results, it even generate something that look like something readable.
+- **Performance**: 
+    - The model performed quite good with a minimum loss of 1.7. It is great improvement compared to previous model.
+    - Problem is that i train model in vacuum, I want to get some real life results, so next model, will be again transformer just bigger, probably. I want to test how it will work will dataset I found on huggingface.
+- **Example**
+```
+DUCHESS OF YORK:
+Besome till perty of Rome, I ull.
+Yet.
+
+SICINIUS:
+Thy lease spreatune's eagure and thou sea let,
+And my goot whither's hold chaughts:
+Thy telmains, now and when in her?
+
+Swilt:
+Think Romen matibles, our good of solven him.
+
+HENRY BOLINGBRown I:
+whither, but it
+How
+What dours, Poling and what he hast boot outtending you womo shame
+Will ruthines; what the tear?
+
+KING RICHARD III:
+Somet!
+
+KING RICHARD III:
+That's Maries: in this too?
+```
+ 
