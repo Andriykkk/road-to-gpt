@@ -44,7 +44,7 @@ This repository contains Jupyter Notebooks implementing different language model
     - The model performed poorly with a minimum loss of 3.2 which is quite big improvement compared to previous model, but still generate gibberish.
     - Problem right now I think is that lstm is not for text, it is definitely better that others that I tried, but transformer is just better and at such size it`s not so expensive, but i want to find something that not transformer as i have no clue of how to expand transformers so they could give good results outside of Shecspir dataset.
  
-### 5. **Transformer Model**
+### 6. **Transformer Model**
 - **Context Size**: 32
 - **Vocabulary Size**: 91 (characted level tokenisation)
 - **Description**: Created Transformer and teach it on Shecspir dataset, very big improvement from lstm and one of the reason is that i made mistake in lstm due to which it couldn`t learn, but still i think that trasnformer work just better and also i get quite good results, it even generate something that look like something readable.
@@ -77,4 +77,22 @@ Somet!
 KING RICHARD III:
 That's Maries: in this too?
 ```
- 
+# 6. Transformer Model (Updated)
+- **Context Size**: 1024
+- **Parameters**: 124 million
+- **Vocabulary Size**: tiktoken(gpt-2) tokenizer
+- **Description**: A new version of the Transformer model trained on the FineWebDataset (on around 2.5 billion tokens). The model showed quite good performance after only 4 hours of training on an A100 GPU. Although the learning rate was slightly too low at the end, preventing it from reaching its full potential, the model still generates meaningful text. Compared to previous iterations, the model have significant improvements in text generation quality.
+- **Performance**: 
+    - The model achieved a validation loss of 3.24, which is a good result given the relatively short training time.
+    - There’s still room for improvement, especially in the training process. The learning rate could have been tuned better for even better results.
+    - Despite these challenges, the model generates text that is much more readable and contextually appropriate than previous versions.
+    - Next Steps: I plan to check other models like mamba and lstm with fine-tuned hyperparameters and possibly on a larger dataset for even more impressive results.
+- **Example(max length is 32)**
+```
+Hello, I'm a language model, and I don't want to go down as if I were to create a robot. It's the way the robot was
+Hello, I'm a language model, so i'm going to explain it back to the basics I've got all along, but this one actually needs some context
+Hello, I'm a language model, so I could see lots of fun with it - especially if your class is a computer language model.
+I've added
+Hello, I'm a language model, and now I'm going to show you some.
+First, let's go. The following code contains some code used
+```
